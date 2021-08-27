@@ -1,14 +1,12 @@
 function EducationBox(props){
-    const {School, From, To, GPA} = props.props;
+
     return(
         <div>
-            <p>EDUCATION</p>
-            <p>{School}</p>
-            <p>{From}</p>
-            <p>{To}</p>
-            <p>{GPA}</p>
+            {props.EdArray.map(val =>{
+                return(<div>{val.School + val.From + val.To + val.GPA}</div>)})}
         </div>
     )
+
 }
 
 
