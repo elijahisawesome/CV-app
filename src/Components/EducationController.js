@@ -1,16 +1,19 @@
 import EducationRender from './Education';
 import React, {Component} from 'react';
+import uniqid from 'uniqid';
 
 class EducationBox extends Component{
     constructor(props){
         super(props)
+
         this.state = {
             EducationboxArray:[],
-            EducationboxProto:{
+            EducationBoxProto:{
                 School:'',
                 From:'',
                 To:'',
-                GPA:''
+                TotalGPA:'',
+                id: uniqid()
             }
         }
         this.submitEducationBox = this.submitEducationBox.bind(this);
@@ -20,15 +23,19 @@ class EducationBox extends Component{
 
     submitEducationBox(e){
         e.preventDefault();
-        let newArray = this.state.EducationboxArray.map(x=>x);
-        let newObj = this.state.EducationboxProto;
-        newArray.push(newObj);
-        this.setState({
-          EducationboxArray: newArray,
-        })
+        
+        this.setState(prevState=>({
+          EducationboxArray: this.state.EducationboxArray.concat(this.state.EducationBoxProto),
+          EducationBoxProto:{
+            ...prevState.EducationBoxProto,
+            id:uniqid(),
+         },
+          
+        }))
       }
 
     updateHandler(e, eventSource){
+
         switch (eventSource){
             case 'School':
                 this.setState(prevState =>({
@@ -54,28 +61,31 @@ class EducationBox extends Component{
                     }
                 }))
                 break;
-            case 'GPA':
+            case 'TotalGPA':
                 this.setState(prevState =>({
-                    EducationboxProto:{
+                    EducationBoxProto:{
                         ...prevState.EducationBoxProto,
-                        GPA: e.target.value
+                        TotalGPA: e.target.value
                     }
                 }))
+                console.log(e.target.value);
+                console.log(this.state.EducationboxProto)
                 break;
             default:
                 break;
         }
     }
-    
+   
     render(){
+        console.log(this.state.EducationBoxProto);
         return(
         <div>
-            <form onSubmit={this.submitEducationBox}>
+            <form onSubmit={event => this.submitEducationBox(event)}>
             <p>
                 Education
             </p>
             School
-            <input id='edboxschool' onChange={event => this.updateHandler(event, 'School')}>
+            <input id='edboxschool' onChange = {event => this.updateHandler(event, 'School')}>
             </input>
             From
             <input id='edboxfrom' onChange = {event => this.updateHandler(event, 'From')}>
@@ -84,7 +94,7 @@ class EducationBox extends Component{
             <input id='edboxto'onChange = {event => this.updateHandler(event, 'To')}>
             </input>
             GPA
-            <input id='edboxgpa'onChange = {event => this.updateHandler(event, 'GPA')}>
+            <input id='edboxgpa'onChange = {event => this.updateHandler(event, 'TotalGPA')}>
             </input>          
             <button>Submit</button>
             </form>

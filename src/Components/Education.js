@@ -1,10 +1,11 @@
-function EducationBox(props){
+import uniqid from 'uniqid';
 
+function EducationBox(props){
     return(
-        <div>
+        <ul>
             {props.EdArray.map(val =>{
-                return(<div>{val.School + val.From + val.To + val.GPA}</div>)})}
-        </div>
+                return(<li key={val.id}>{val.School + val.From + val.To + val.TotalGPA}</li>)})}
+        </ul>
     )
 
 }
