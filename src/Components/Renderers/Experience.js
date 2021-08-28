@@ -1,9 +1,9 @@
 function Experience(props){
     return(
-        <div>
+        <ul>
             {props.propArray.map(val =>{
                 return(<li key={val.id}>{val.Company + val.Role + val.Description}</li>)})}
-        </div>
+        </ul>
     )
 }
 

@@ -1,10 +1,10 @@
 import './App.css';
 import React, {Component} from 'react';
-import Skillbox from './Components/Skills.js';
-import EducationRender from './Components/EducationController.js';
-import ExperienceRender from './Components/ExperienceController.js';
-import Headshot from './Components/Headshot.js';
-import Objectivebox from './Components/Objective.js';
+import Skills from './Components/Controllers/SkillsController.js';
+import Education from './Components/Controllers/EducationController.js';
+import Experience from './Components/Controllers/ExperienceController.js';
+import Headshot from './Components/Controllers/HeadshotController.js';
+import Objectives from './Components/Controllers/ObjectiveController.js';
 
 
 class App extends Component{
@@ -17,8 +17,9 @@ class App extends Component{
   render(){
     return(
       <div>
-        <EducationRender/>
-        <ExperienceRender/>
+        <Education/>
+        <Experience/>
+        <Skills/>
       </div>
     )
   }

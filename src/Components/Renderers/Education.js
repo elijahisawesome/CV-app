@@ -1,5 +1,3 @@
-import uniqid from 'uniqid';
-
 function EducationBox(props){
     return(
         <ul>
@@ -8,6 +6,14 @@ function EducationBox(props){
         </ul>
     )
 
+}
+EducationBox.defaultProps = {
+    EdArray:[{
+        School: 'School: ',
+        From: 'From: ',
+        To: 'To: ',
+        TotalGPA: 'GPA: '
+    }]
 }
 
 

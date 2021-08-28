@@ -1,15 +1,31 @@
-import EducationRender from './Education';
-import Box from './protoBoxController';
+import EducationRender from '../Renderers/Education.js'
+import Box from '../protoBoxController.js';
 
 class EducationBox extends Box{
     constructor(props){
         super(props)
+        this.defaultArray = [{
+            School: 'School: ',
+            From: 'From: ',
+            To: 'To: ',
+            TotalGPA: 'GPA: ',
+            id: 1
+        }]
+        this.blank = this.state.infoToBePassedArray;
 
     }
     render(){
+        let defaultProp;
+        if(this.state.infoToBePassedArray == this.blank){
+            defaultProp = this.defaultArray;
+        }
+        else 
+        {  
+            defaultProp = this.state.infoToBePassedArray
+        };
         return(
         <div>
-            <form onSubmit={event => this.submitEducationBox(event)}>
+            <form onSubmit={event => this.submitBox(event)}>
             <p>
                 Education
             </p>
@@ -28,8 +44,8 @@ class EducationBox extends Box{
             <button>Submit</button>
             </form>
 
-            <div>
-                <EducationRender EdArray={this.state.infoToBePassedArray}/>
+            <div className='Rendered'>
+                <EducationRender EdArray={defaultProp}/>
             </div>
         </div>
         )

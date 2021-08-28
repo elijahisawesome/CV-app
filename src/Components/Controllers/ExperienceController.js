@@ -1,5 +1,5 @@
-import Box from './protoBoxController.js';
-import Experience from './Experience.js';
+import Box from '../protoBoxController.js';
+import Experience from '../Renderers/Experience.js';
 
 class ExperienceController extends Box{
     constructor(props){
@@ -22,7 +22,9 @@ class ExperienceController extends Box{
                 <input onChange={event => this.updateHandler(event, 'Description')}></input>
                 <button>Submit</button>
                 </form>
-                <Experience propArray={this.state.infoToBePassedArray}/>
+                <div className='Rendered'>
+                    <Experience propArray={this.state.infoToBePassedArray}/>
+                </div>
             </div>
         )
     }
