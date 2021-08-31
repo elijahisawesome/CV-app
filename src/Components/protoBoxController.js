@@ -16,9 +16,9 @@ class Box extends Component{
         
     }
 
-    submitBox(e){
+    submitBox(e, passSingleObjectFromArray){
         e.preventDefault();
-        
+        if(!passSingleObjectFromArray){
         this.setState(prevState=>({
           infoToBePassedArray: this.state.infoToBePassedArray.concat(this.state.infoToBePassedProto),
           infoToBePassedProto:{
@@ -26,7 +26,12 @@ class Box extends Component{
             id:uniqid(),
          },
           
-        }))
+        }))}
+        else{
+            this.setState(prevState =>({
+                infoToBePassedArray: [this.state.infoToBePassedProto],
+            }))
+        }
       }
 
     updateHandler(e, eventSource){

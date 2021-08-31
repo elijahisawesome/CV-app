@@ -4,27 +4,17 @@ import Box from '../protoBoxController.js';
 class EducationBox extends Box{
     constructor(props){
         super(props)
-        this.defaultArray = [{
-            School: 'School: ',
-            From: 'From: ',
-            To: 'To: ',
-            TotalGPA: 'GPA: ',
-            id: 1
-        }]
-        this.blank = this.state.infoToBePassedArray;
-
+        this.blankArray = this.state.infoToBePassedArray;
     }
+
     render(){
         let defaultProp;
-        if(this.state.infoToBePassedArray == this.blank){
-            defaultProp = this.defaultArray;
-        }
-        else 
-        {  
+        if(this.state.infoToBePassedArray != this.blankArray){
             defaultProp = this.state.infoToBePassedArray
-        };
+        }
+
         return(
-        <div>
+        <div className = 'EducationBox Controller'>
             <form onSubmit={event => this.submitBox(event)}>
             <p>
                 Education

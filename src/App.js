@@ -16,10 +16,11 @@ class App extends Component{
 
   render(){
     return(
-      <div>
+      <div className="CV">
         <Education/>
         <Experience/>
         <Skills/>
+        <Objectives/>
       </div>
     )
   }

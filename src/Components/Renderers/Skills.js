@@ -7,4 +7,11 @@ function Skills(props){
     )
 }
 
+Skills.defaultProps = {
+    propArray:[{
+        Skill: 'Skill: ',
+        id: 1
+    }]
+}
+
 export default Skills;

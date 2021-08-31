@@ -12,7 +12,8 @@ EducationBox.defaultProps = {
         School: 'School: ',
         From: 'From: ',
         To: 'To: ',
-        TotalGPA: 'GPA: '
+        TotalGPA: 'GPA: ',
+        id: 0
     }]
 }
 

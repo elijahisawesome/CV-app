@@ -6,5 +6,13 @@ function Experience(props){
         </ul>
     )
 }
+Experience.defaultProps = {
+    propArray:[{
+        Company: 'Company: ',
+        Role: 'Role: ',
+        Description: 'Description: ',
+        id: 1
+    }]
+}
 
 export default Experience;

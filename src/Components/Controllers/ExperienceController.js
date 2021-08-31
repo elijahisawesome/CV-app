@@ -4,12 +4,18 @@ import Experience from '../Renderers/Experience.js';
 class ExperienceController extends Box{
     constructor(props){
         super(props)
+        this.blankArray = this.state.infoToBePassedArray;
     }
     
 
     render(){
+        let defaultProp;
+        if(this.state.infoToBePassedArray != this.blankArray){
+            defaultProp = this.state.infoToBePassedArray
+        }
+
         return(
-            <div>
+            <div className = 'ExperienceBox Controller'>
                 <form onSubmit ={this.submitBox}>
                 <p>
                     Experience
@@ -23,7 +29,7 @@ class ExperienceController extends Box{
                 <button>Submit</button>
                 </form>
                 <div className='Rendered'>
-                    <Experience propArray={this.state.infoToBePassedArray}/>
+                    <Experience propArray={defaultProp}/>
                 </div>
             </div>
         )

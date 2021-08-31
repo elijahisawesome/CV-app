@@ -4,10 +4,18 @@ import Box from '../protoBoxController.js';
 class SkillBox extends Box{
     constructor(props){
         super(props)
+        this.defaultArray = this.state.infoToBePassedArray
     }
     render(){
+        let propArray;
+        if(this.state.infoToBePassedArray != this.defaultArray){
+            propArray = this.state.infoToBePassedArray;
+        }
+
         return(
-            <div>
+            <div className = "SkillBox Controller">
+                Skills
+                
                 <form onSubmit={this.submitBox}>
 
                 Add Skill
@@ -16,7 +24,7 @@ class SkillBox extends Box{
                 </form>
                 
                 <div className='Rendered'>
-                    <SkillRenderer propArray = {this.state.infoToBePassedArray}/>
+                    <SkillRenderer propArray = {propArray}/>
                 </div>
             </div>
         )
