@@ -13,6 +13,7 @@ class Box extends Component{
         }
         this.submitBox = this.submitBox.bind(this);
         this.updateHandler = this.updateHandler.bind(this);
+        this.removeElement = this.removeElement.bind(this);
         
     }
 
@@ -40,6 +41,13 @@ class Box extends Component{
                 ...prevState.infoToBePassedProto,
                 [eventSource]: e.target.value,
             }
+        }))
+    }
+    removeElement(index){
+        let newArray = this.state.infoToBePassedArray;
+        newArray.splice(index, 1)
+        this.setState(prevState=>({
+            infoToBePassedArray: newArray
         }))
     }
 

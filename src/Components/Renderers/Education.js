@@ -1,8 +1,15 @@
 function EducationBox(props){
     return(
         <ul>
-            {props.EdArray.map(val =>{
-                return(<li key={val.id}>{val.School + val.From + val.To + val.TotalGPA}</li>)})}
+            {props.EdArray.map((val, index) =>{
+                return  (<li key={val.id}>
+                            {val.School + val.From + val.To + val.TotalGPA}
+                            <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                        </li>
+                        )
+                    }
+                )
+            }
         </ul>
     )
 

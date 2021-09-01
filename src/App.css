@@ -3,7 +3,7 @@
   left: 100%;
 }
 .EducationBox{
-  
+  order:5;
 }
 .EducationBox.Rendered{
   order:1;
@@ -13,6 +13,10 @@
 }
 .CV{
   display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+  margin-left:15%;
 }
 .Controller{
   display: contents;

@@ -35,7 +35,7 @@ class EducationBox extends Box{
             </form>
 
             <div className='Rendered'>
-                <EducationRender EdArray={defaultProp}/>
+                <EducationRender EdArray={defaultProp} deleter={this.removeElement}/>
             </div>
         </div>
         )
