@@ -21,3 +21,8 @@
 .Controller{
   display: contents;
 }
+
+.Headshot{
+  width:100px;
+  height:100px;
+}

@@ -1,8 +1,16 @@
 function Experience(props){
     return(
         <ul>
-            {props.propArray.map(val =>{
-                return(<li key={val.id}>{val.Company + val.Role + val.Description}</li>)})}
+            {props.propArray.map((val, index) =>{
+                return(
+                        <li key={val.id}>{
+                            val.Company + val.Role + val.Description}
+                            <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                        </li>
+                    
+                    )}
+                )
+            }
         </ul>
     )
 }

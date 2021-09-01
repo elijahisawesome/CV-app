@@ -21,6 +21,7 @@ class App extends Component{
         <Experience/>
         <Skills/>
         <Objectives/>
+        <Headshot/>
       </div>
     )
   }

@@ -21,7 +21,7 @@ class ObjectiveBox extends Box{
                 <button>Submit</button>
                 </form>    
                 <div className='Rendered'>
-                    <ObjectiveRenderer propArray = {propArray[0]} deleter={this.deleter}/>
+                    <ObjectiveRenderer propArray = {propArray[0]} deleter={this.removeElement}/>
                 </div>
             </div>
         )

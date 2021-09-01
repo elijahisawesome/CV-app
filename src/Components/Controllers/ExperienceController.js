@@ -29,7 +29,7 @@ class ExperienceController extends Box{
                 <button>Submit</button>
                 </form>
                 <div className='Rendered'>
-                    <Experience propArray={defaultProp}/>
+                    <Experience propArray={defaultProp} deleter={this.removeElement}/>
                 </div>
             </div>
         )

@@ -1,5 +1,4 @@
 function Objective(props){
-    console.log(props.propArray.Objective)
     return(
         <div>
             <p>{props.propArray.Objective}</p>

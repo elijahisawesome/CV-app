@@ -24,7 +24,7 @@ class SkillBox extends Box{
                 </form>
                 
                 <div className='Rendered'>
-                    <SkillRenderer propArray = {propArray}/>
+                    <SkillRenderer propArray = {propArray} deleter={this.removeElement}/>
                 </div>
             </div>
         )

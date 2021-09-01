@@ -1,8 +1,12 @@
 function Skills(props){
     return(
         <div>
-            {props.propArray.map(val =>{
-                return(<li key={val.id}>{val.Skill}</li>)})}
+            {props.propArray.map((val, index) =>{
+                return(
+                <li key={val.id}>{
+                    val.Skill}
+                    <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                </li>)})}
         </div>
     )
 }
