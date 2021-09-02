@@ -3,8 +3,10 @@ function Experience(props){
         <ul>
             {props.propArray.map((val, index) =>{
                 return(
-                        <li key={val.id}>{
-                            val.Company + val.Role + val.Description}
+                        <li key={val.id}>
+                            <div className='Content'>{val.Company}</div>
+                            <div className='Content'>{val.Role}</div>
+                            <div className='Content'>{val.Description}</div>
                             <button onClick={()=>{props.deleter(index)}}>Delete</button>
                         </li>
                     

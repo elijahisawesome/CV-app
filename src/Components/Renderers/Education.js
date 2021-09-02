@@ -3,7 +3,10 @@ function EducationBox(props){
         <ul>
             {props.EdArray.map((val, index) =>{
                 return  (<li key={val.id}>
-                            {val.School + val.From + val.To + val.TotalGPA}
+                            <div id='School' className='Content'>School: {val.School}</div>
+                            <div id='From' className='Content'>From: {val.From}</div>
+                            <div id='To' className='Content'>To: {val.To}</div>
+                            <div id='GPA' className='Content'>GPA: {val.TotalGPA}</div>
                             <button onClick={()=>{props.deleter(index)}}>Delete</button>
                         </li>
                         )
@@ -16,10 +19,10 @@ function EducationBox(props){
 }
 EducationBox.defaultProps = {
     EdArray:[{
-        School: 'School: ',
-        From: 'From: ',
-        To: 'To: ',
-        TotalGPA: 'GPA: ',
+        School: '',
+        From: '',
+        To: '',
+        TotalGPA: '',
         id: 0
     }]
 }
