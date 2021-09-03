@@ -7,7 +7,7 @@ function EducationBox(props){
                             <div id='From' className='Content'>From: {val.From}</div>
                             <div id='To' className='Content'>To: {val.To}</div>
                             <div id='GPA' className='Content'>GPA: {val.TotalGPA}</div>
-                            <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                            <button className ='RemovableForm' onClick={()=>{props.deleter(index)}}>Delete</button>
                         </li>
                         )
                     }

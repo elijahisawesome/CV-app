@@ -2,7 +2,7 @@ function Objective(props){
     return(
         <div>
             <p>{props.propArray.Objective}</p>
-            <button onClick={()=>props.deleter(0)}>Delete</button>
+            <button  className ='RemovableForm' onClick={()=>props.deleter(0)}>Delete</button>
         </div>
     )
 }

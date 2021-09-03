@@ -14,13 +14,14 @@ class ObjectiveBox extends Box{
 
         return(
             <div className="ObjectiveBox Controller">
-                <form onSubmit={(event)=>{this.submitBox(event, true)}}>
+                <form className ='RemovableForm' onSubmit={(event)=>{this.submitBox(event, true)}}>
 
                 Add Objective
                 <textarea onChange={event => this.updateHandler(event, 'Objective')}></textarea>
                 <button>Submit</button>
                 </form>    
-                <div className='Rendered'>
+                <div className='Rendered Moveable'>
+                    <p>Objective: </p>
                     <ObjectiveRenderer propArray = {propArray[0]} deleter={this.removeElement}/>
                 </div>
             </div>

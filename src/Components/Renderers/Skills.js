@@ -5,7 +5,7 @@ function Skills(props){
                 return(
                 <li key={val.id}>{
                     val.Skill}
-                    <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                    <button  className ='RemovableForm' onClick={()=>{props.deleter(index)}}>Delete</button>
                 </li>)})}
         </div>
     )

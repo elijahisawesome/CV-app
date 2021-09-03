@@ -14,16 +14,14 @@ class SkillBox extends Box{
 
         return(
             <div className = "SkillBox Controller">
-                Skills
-                
-                <form onSubmit={this.submitBox}>
-
+                <form className ='RemovableForm' onSubmit={this.submitBox}>
                 Add Skill
                 <input onChange={event => this.updateHandler(event, 'Skill')}></input>
                 <button>Submit</button>
                 </form>
                 
-                <div className='Rendered'>
+                <div className='Rendered Moveable'>
+                    Skills: 
                     <SkillRenderer propArray = {propArray} deleter={this.removeElement}/>
                 </div>
             </div>

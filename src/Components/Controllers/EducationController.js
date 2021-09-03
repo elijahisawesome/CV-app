@@ -15,9 +15,9 @@ class EducationBox extends Box{
 
         return(
         <div className = 'EducationBox Controller'>
-            <form onSubmit={event => this.submitBox(event)}>
+            <form className ='RemovableForm' onSubmit={event => this.submitBox(event)}>
             <p>
-                Education
+                Add Education
             </p>
             School
             <input id='edboxschool' onChange = {event => this.updateHandler(event, 'School')}>
@@ -34,7 +34,8 @@ class EducationBox extends Box{
             <button>Submit</button>
             </form>
 
-            <div className='Rendered'>
+            <div className='Rendered Moveable'>
+                <p>Education: </p>
                 <EducationRender EdArray={defaultProp} deleter={this.removeElement}/>
             </div>
         </div>

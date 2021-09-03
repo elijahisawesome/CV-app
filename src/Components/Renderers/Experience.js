@@ -6,8 +6,8 @@ function Experience(props){
                         <li key={val.id}>
                             <div className='Content'>{val.Company}</div>
                             <div className='Content'>{val.Role}</div>
-                            <div className='Content'>{val.Description}</div>
-                            <button onClick={()=>{props.deleter(index)}}>Delete</button>
+                            <div className='Content Description'>{val.Description}</div>
+                            <button className ='RemovableForm' onClick={()=>{props.deleter(index)}}>Delete</button>
                         </li>
                     
                     )}

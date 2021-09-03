@@ -16,19 +16,22 @@ class ExperienceController extends Box{
 
         return(
             <div className = 'ExperienceBox Controller'>
-                <form onSubmit ={this.submitBox}>
+                <form onSubmit ={this.submitBox} className ='RemovableForm'>
                 <p>
-                    Experience
+                    Add Experience
                 </p>
                 Company
                 <input onChange={event =>this.updateHandler(event, 'Company')}></input>
                 Role
                 <input onChange={event => this.updateHandler(event, 'Role')}></input>
-                Description
-                <input onChange={event => this.updateHandler(event, 'Description')}></input>
+                <div>
+                    Description
+                    <textarea onChange={event => this.updateHandler(event, 'Description')}></textarea>
+                </div>
                 <button>Submit</button>
                 </form>
-                <div className='Rendered'>
+                <div className='Rendered Moveable'>
+                    <p>Experience: </p>
                     <Experience propArray={defaultProp} deleter={this.removeElement}/>
                 </div>
             </div>

@@ -16,16 +16,31 @@ class App extends Component{
 
   render(){
     return(
-      <div className="CV">
+      <div className="CV" id='CV'>
+        <Headshot/>
         <Education/>
         <Experience/>
         <Skills/>
         <Objectives/>
-        <Headshot/>
+        <button onClick={this.togglePrint}>Ready To Print</button>
       </div>
     )
   }
 
+  togglePrint(){
+    let doc = document.getElementById('CV');
+    doc.classList.toggle('Printing');
+
+    let forms = document.getElementsByClassName('RemovableForm');
+    Array.from(forms).forEach(e => {
+      e.classList.toggle('Printing');
+    });
+
+    let rendered = document.getElementsByClassName('Rendered');
+    Array.from(rendered).forEach(e=>{
+      e.classList.toggle('Printing');
+    })
+  }
 
 }
 

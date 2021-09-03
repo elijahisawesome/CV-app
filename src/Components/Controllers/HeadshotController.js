@@ -13,7 +13,7 @@ class Headshot extends Box{
         }
         return(
             <div className='HeadshotBox'>
-                <input type='file' accept='image/*' onChange={(e)=>{this.handleUpdate(e)}}/>
+                <input className='RemovableForm' type='file' accept='image/*' onChange={(e)=>{this.handleUpdate(e)}}/>
                 <div className="Rendered">
                     <HeadshotRender image={propObject}/>
                 </div>

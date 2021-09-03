@@ -1,20 +1,19 @@
 .Rendered{
-  background-color: steelblue;
-  left: 100%;
+  position: relative;
+  visibility: visible;
 }
-.EducationBox{
-  order:5;
-}
-.EducationBox.Rendered{
-  order:1;
-}
-.ExperienceBox.Rendered{
-  order:2;
+.Rendered.Moveable.Printing{
+  width:450px;
+  left: 150px;
+  top: -100px;
+  visibility: visible;
 }
 .CV{
-  display: flex;
+  position:absolute;
+  display: inline-flex;
+  align-content: flex-start;
   flex-direction: column;
-  width: 70%;
+  width: 600px;
   text-align: center;
   margin-left:15%;
 }
@@ -25,4 +24,36 @@
 .Headshot{
   width:100px;
   height:100px;
+  position:relative;
+  visibility: visible;
+  top:100%;
+}
+#root{
+  background:rgb(255, 253, 237);
+}
+.Printing{
+  visibility:hidden;
+}
+.Printing.RemovableForm{
+  display:none;
+}
+.HeadshotBox{
+  position:relative;
+  text-align:left;
+  width:100px;
+  height:100px;
+}
+.Content{
+  display: inline-block;
+  height: 20px;
+  width: 200px;
+  border-radius: 3%;
+  border-color:grey;
+  border-width: 2px;
+  border-style:solid;
+  text-align: left;
+}
+.Content.Description{
+  height: 40px;
+  width:400px;
 }
