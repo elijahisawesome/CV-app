@@ -7,9 +7,9 @@
 }
 .Rendered.Moveable.Printing{
   width:450px;
-  top: -100px;
+  top: -200px;
   visibility: visible;
-
+  text-align: right;
 }
 .MainDiv{
   border-width:1px;
@@ -34,8 +34,8 @@
 }
 
 .Headshot{
-  width:100px;
-  height:100px;
+  width:200px;
+  height:200px;
   position:relative;
   visibility: visible;
   top:100%;
@@ -52,7 +52,7 @@
 .HeadshotBox{
   position:relative;
   text-align:left;
-  width:100px;
+  width:200px;
   height:auto;
 }
 .HeadshotRendered{
@@ -70,7 +70,8 @@
 }
 .Content.Description{
   height: 40px;
-  width:400px;
+  width:100%;
+  max-width:400px;
 }
 .ContentBox{
   display:flex;
@@ -79,6 +80,7 @@
   position:relative;
   display:block;
   width: 100%;
+  max-width: 800px;
 }
 .UserID{
   text-align:right;

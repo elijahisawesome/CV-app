@@ -7,8 +7,8 @@ class UserID extends Box{
     render(){
         return(
             <div className ="UserIDBox ContentBox">
-                <p>Add Contact Info:</p>
                 <form className ='RemovableForm' onSubmit={(event)=>{this.submitBox(event, true)}}>
+                    <p>Add Contact Info:</p>
                     Name:
                     <input type='text' onChange={(event)=>{this.updateHandler(event, 'Name')}}></input>
                     Address:

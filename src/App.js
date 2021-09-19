@@ -49,6 +49,9 @@ class App extends Component{
 
 }
 
+//button that allows for printing, breaks when headshot is replaced with another image.
+
+/*
 const PrintableCV = function(props){
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -64,6 +67,6 @@ const PrintableCV = function(props){
   )
 
 }
+*/
 
-
-export default PrintableCV;
+export default App;
