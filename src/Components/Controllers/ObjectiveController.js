@@ -13,7 +13,7 @@ class ObjectiveBox extends Box{
         }
 
         return(
-            <div className="ObjectiveBox Controller">
+            <div className="ObjectiveBox Controller ContentBox">
                 <form className ='RemovableForm' onSubmit={(event)=>{this.submitBox(event, true)}}>
 
                 Add Objective

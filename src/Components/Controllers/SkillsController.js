@@ -13,7 +13,7 @@ class SkillBox extends Box{
         }
 
         return(
-            <div className = "SkillBox Controller">
+            <div className = "SkillBox Controller ContentBox">
                 <form className ='RemovableForm' onSubmit={this.submitBox}>
                 Add Skill
                 <input onChange={event => this.updateHandler(event, 'Skill')}></input>

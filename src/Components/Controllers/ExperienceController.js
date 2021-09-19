@@ -15,7 +15,7 @@ class ExperienceController extends Box{
         }
 
         return(
-            <div className = 'ExperienceBox Controller'>
+            <div className = 'ExperienceBox Controller ContentBox'>
                 <form onSubmit ={this.submitBox} className ='RemovableForm'>
                 <p>
                     Add Experience

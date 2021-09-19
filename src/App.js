@@ -1,10 +1,14 @@
 import './App.css';
-import React, {Component} from 'react';
+import React, {Component, useRef} from 'react';
 import Skills from './Components/Controllers/SkillsController.js';
 import Education from './Components/Controllers/EducationController.js';
 import Experience from './Components/Controllers/ExperienceController.js';
 import Headshot from './Components/Controllers/HeadshotController.js';
 import Objectives from './Components/Controllers/ObjectiveController.js';
+import UserID from './Components/Controllers/UserIDController.js';
+
+import {useReactToPrint} from 'react-to-print';
+
 
 
 class App extends Component{
@@ -18,6 +22,7 @@ class App extends Component{
     return(
       <div className="CV" id='CV'>
         <Headshot/>
+        <UserID/>
         <Education/>
         <Experience/>
         <Skills/>
@@ -44,4 +49,21 @@ class App extends Component{
 
 }
 
-export default App;
+const PrintableCV = function(props){
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: ()=>{
+      return componentRef.current
+    }
+  })
+  return(
+    <div>
+      <App ref={componentRef}/>
+      <button className='PrintButton' onClick = {handlePrint}>Print this thing</button>
+    </div>
+  )
+
+}
+
+
+export default PrintableCV;

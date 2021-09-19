@@ -14,7 +14,7 @@ class EducationBox extends Box{
         }
 
         return(
-        <div className = 'EducationBox Controller'>
+        <div className = 'EducationBox Controller ContentBox'>
             <form className ='RemovableForm' onSubmit={event => this.submitBox(event)}>
             <p>
                 Add Education
@@ -24,7 +24,7 @@ class EducationBox extends Box{
             </input>
             From
             <input id='edboxfrom' onChange = {event => this.updateHandler(event, 'From')}>
-            </input>
+            </input><div></div>
             To
             <input id='edboxto'onChange = {event => this.updateHandler(event, 'To')}>
             </input>
